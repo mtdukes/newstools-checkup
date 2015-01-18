@@ -9,23 +9,26 @@ An open-source Django app to survey politicians, by the Newsday investigations t
 Follow these instructions to set up checkup on your local machine for testing (installation for Amazon EC2 coming soon).
 
 1. Clone the repo.
-```bash
-$ git clone https://github.com/mtdukes/newstools-checkup.git
-```
+   ```bash
+   $ git clone https://github.com/mtdukes/newstools-checkup.git
+   ```
 2. Install [Django](https://docs.djangoproject.com/en/1.7/intro/install/). To do that in a [virtual environment](http://docs.python-guide.org/en/latest/dev/virtualenvs/):
-```bash
-$ mkvirtualenv venv
-$ pip install Django
-```
+   ```bash
+   $ mkvirtualenv venv
+   $ pip install Django
+   ```
+
 3. Outside your ```newstools-checkup``` directory, start a new Django project to store your checkup application.
 ```bash
 $ django-admin.py startproject mycheckup
 ```
+
 4. Navigate to your Djano project directory and make a copy of the contents of the ```newstools-checkup``` directory.
 ```bash
 $ cd mycheckup
 $ cp -R ../newstools-checkup/* ./
 ```
+
 5. Run the setup file inside your project directory.
 ```bash
 $ python setup.py install
