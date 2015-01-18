@@ -11,7 +11,7 @@ Follow these instructions to set up checkup on your local machine for testing (i
    ```bash
    $ git clone https://github.com/mtdukes/newstools-checkup.git
    ```
-   
+
 2. Install [Django](https://docs.djangoproject.com/en/1.7/intro/install/). To do that in a [virtual environment](http://docs.python-guide.org/en/latest/dev/virtualenvs/):
    ```bash
    $ mkvirtualenv venv
@@ -33,6 +33,7 @@ Follow these instructions to set up checkup on your local machine for testing (i
    ```bash
    $ python setup.py install
    ```
+
 6. Using the ```local_settings.example``` file included with the checkup app, edit the ```settings.py``` file located in your project subfolder. To run properly, the settings file needs the following items copied from ```local_settings.example```:
    * ```ROOT_PATH```
    * ```STATIC_ROOT```
@@ -52,10 +53,12 @@ Follow these instructions to set up checkup on your local machine for testing (i
    ```bash
    $ python manage.py migrate
    ```
+
 8. [Create a Django superuser](https://docs.djangoproject.com/en/1.7/intro/tutorial02/) for initial login and follow the prompts.
    ```bash
    $ python manage.py createsuperuser
    ```
+
 9. In ```urls.py``` in your project directory (NOTE: *not* the ```checkup``` directory), change the url patterns variable to the following:
    ```python
    urlpatterns = patterns('',
@@ -64,7 +67,9 @@ Follow these instructions to set up checkup on your local machine for testing (i
        url(r'^admin/', include(admin.site.urls)),
    )
    ```
+
 10. Run local server to begin setting up checkup.
    ```bash
    $ python manage.py runserver
    ```
+   
