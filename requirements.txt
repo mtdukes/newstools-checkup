@@ -7,3 +7,6 @@ django-localflavor
 django-localflavor-us
 django-ratelimit
 django-dbtemplates
+gunicorn
+django-extensions
+django-bakery

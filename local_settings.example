@@ -4,6 +4,10 @@ ROOT_PATH = os.path.dirname(__file__)
 STATIC_ROOT = os.path.join(ROOT_PATH, 'static')
 BUILD_DIR = os.path.join(ROOT_PATH, 'build')
 
+#set to ID of the site you declare in Django admin
+#default corresponds to "example.com"
+SITE_ID = 1
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
@@ -20,16 +24,17 @@ DATABASES = {
 INSTALLED_APPS += (
 	'grappelli.dashboard',
 	'grappelli',
-	'django.contrib.admin',
+#remove to avoid admin duplication error	'django.contrib.admin',
 	'django.contrib.admindocs',
 	'django.contrib.humanize',
 	'django.contrib.redirects',
+	'django.contrib.sites', #added to avoid Django site error when rendering some pages
 	
 	'gunicorn',
 	
 	'django_extensions',
 	'localflavor',
-	'south',
+#deprecated	'south',
 	'bakery',
 	'dbtemplates',
 	
@@ -71,7 +76,7 @@ POLITICAL_PARTIES = (
 )
 
 # Base template, this is optional, default is checkup/base.html
-TEMPLATE_BASE = "newsday/base.html"
+TEMPLATE_BASE = "checkup/base.html"
 
 # Turn off debug
 # DEBUG = False
