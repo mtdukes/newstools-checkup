@@ -11,6 +11,7 @@ Follow these instructions to set up checkup on your local machine for testing (i
    ```bash
    $ git clone https://github.com/mtdukes/newstools-checkup.git
    ```
+   
 2. Install [Django](https://docs.djangoproject.com/en/1.7/intro/install/). To do that in a [virtual environment](http://docs.python-guide.org/en/latest/dev/virtualenvs/):
    ```bash
    $ mkvirtualenv venv
